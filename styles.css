@@ -8,7 +8,7 @@ body {
 
 header {
     background-color: #23272A;
-    padding: 40px 20px; /* Padding to maintain header size */
+    padding: 30px 20px; /* Slightly reduce the header padding */
     text-align: center;
     position: relative;
 }
@@ -48,18 +48,19 @@ nav ul li a:hover {
 
 main {
     text-align: center;
-    padding: 40px 20px; /* Reduced padding to remove extra space */
+    padding: 20px 20px; /* Reduced padding to remove extra space */
 }
 
 .welcome {
     text-align: center; /* Center all content in the welcome class */
     padding-top: 10px; /* Reduced padding above the logo */
+    margin-top: -10px; /* Pull the welcome section up slightly */
 }
 
 .welcome-logo {
-    width: 120px; /* Increased size of the logo */
+    width: 120px; /* Logo size */
     height: auto;
-    margin: 10px 0 10px; /* Reduced space above and below the logo */
+    margin: -20px 0 10px; /* Reduced space above the logo, while keeping some below */
 }
 
 .welcome h2 {
@@ -86,11 +87,12 @@ main {
     }
 
     .welcome-logo {
-        width: 100px; /* Slightly larger logo on mobile */
-        margin: 10px 0 10px; /* Consistent spacing for mobile as well */
+        width: 100px; /* Logo size on mobile */
+        margin: -15px 0 10px; /* Reduced space above the logo for mobile */
     }
 
     .welcome {
         padding-top: 10px; /* Reduced padding on mobile */
+        margin-top: -10px; /* Pull the welcome section up slightly on mobile */
     }
 }
