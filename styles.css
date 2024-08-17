@@ -7,7 +7,7 @@ body {
 
 header {
     background-color: #23272A;
-    padding: 20px;
+    padding: 40px 20px; /* Increase the padding to make the header taller */
     text-align: center;
     position: relative;
 }
