@@ -20,18 +20,6 @@ header {
     position: relative;
 }
 
-.logo-container {
-    position: absolute;
-    top: -20px; /* Position the logo correctly for PC */
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.logo {
-    width: 80px; /* Increase logo size on PC */
-    height: auto;
-}
-
 h1 {
     margin: 0;
     font-size: 28px;
@@ -63,6 +51,17 @@ main {
     padding: 50px 20px;
 }
 
+.welcome {
+    text-align: center; /* Center all content in the welcome class */
+    padding-top: 20px;
+}
+
+.welcome-logo {
+    width: 80px; /* Adjust the size of the logo as needed */
+    height: auto;
+    margin-bottom: 20px; /* Space between the logo and welcome text */
+}
+
 .welcome h2 {
     font-size: 36px;
     margin-bottom: 20px;
@@ -82,46 +81,7 @@ main {
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    h1 {
-        display: none; /* Hide "Jelly's Space" on mobile */
-    }
-
-    .logo-container {
-        position: relative; /* Remove absolute positioning */
-        top: auto; /* Reset top position */
-        left: 50%; /* Center the logo horizontally */
-        transform: translateX(-50%); /* Ensure it's centered */
-        margin: 20px auto; /* Add margin to place it between header and welcome */
-        text-align: center;
-    }
-
-    header + .logo-container {
-        margin-top: -20px; /* Slight overlap adjustment, if needed */
-    }
-
-    nav ul {
-        flex-direction: row;
-        justify-content: center;
-        width: 100%;
-        padding-top: 20px;
-    }
-
-    .welcome {
-        padding-top: 20px; /* Ensure space between logo and welcome */
-    }
-
-    main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .welcome .avatar {
-        width: 150px; /* Maintain avatar size on mobile */
+    .welcome-logo {
+        width: 70px; /* Slightly smaller logo on mobile */
     }
 }
