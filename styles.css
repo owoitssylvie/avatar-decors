@@ -93,7 +93,7 @@ main {
     nav ul {
         justify-content: space-around; /* Space out links evenly across the width */
         width: 100%; /* Ensure the links span the full width */
-        padding-left: 20px; /* Shift links to the right on mobile */
+        padding-left: 30px; /* Shift links a bit more to the right on mobile */
     }
 
     nav ul li {
