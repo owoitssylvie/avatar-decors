@@ -1,4 +1,4 @@
-/* Existing styles */
+/* General styles (PC and Mobile) */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -8,7 +8,7 @@ body {
 
 header {
     background-color: #23272A;
-    padding: 20px;
+    padding: 40px 20px; /* Increased padding to keep the header size on PC */
     text-align: center;
     position: relative;
 }
@@ -17,17 +17,18 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .logo-container {
     position: absolute;
-    top: -30px;
+    top: 10px; /* Positioned correctly for PC */
     left: 50%;
     transform: translateX(-50%);
 }
 
 .logo {
-    width: 50px;
+    width: 70px; /* Bigger logo size */
     height: auto;
 }
 
@@ -53,6 +54,10 @@ nav ul li a {
     font-size: 18px;
 }
 
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
 main {
     text-align: center;
     padding: 50px 20px;
@@ -71,19 +76,21 @@ main {
 
 .welcome .avatar {
     margin-top: 20px;
-    width: 100px;
+    width: 150px; /* Maintained the size of the cat avatar */
     height: auto;
 }
 
-/* New styles for mobile devices */
+/* Mobile-specific styles */
 @media (max-width: 768px) {
     .logo-container {
-        position: static; /* Remove absolute positioning on mobile */
-        margin-top: 20px;
+        position: static; /* Logo will now sit in the flow of the document */
+        margin: 20px auto 0; /* Center the logo on mobile, above the text */
+        text-align: center;
     }
 
     .logo {
-        width: 70px; /* Make the logo slightly larger on mobile */
+        width: 70px; /* Maintain the larger logo size on mobile */
+        height: auto;
     }
 
     h1 {
@@ -91,19 +98,27 @@ main {
     }
 
     .container {
-        flex-direction: column; /* Stack navigation and logo on mobile */
+        flex-direction: column; /* Stack elements on mobile */
         align-items: center;
     }
 
     nav ul {
-        flex-direction: row; /* Ensure nav items are in a row */
+        flex-direction: row;
         justify-content: center;
-        width: 100%; /* Make sure the nav fills the header width */
-        padding-top: 20px; /* Add some padding above the nav items */
+        width: 100%;
+        padding-top: 20px;
     }
 
     nav ul li {
-        margin-left: 10px; /* Adjust spacing between links */
-        margin-right: 10px; /* Ensure even spacing */
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    main {
+        padding-top: 10px; /* Adjust padding to account for the logo position */
+    }
+
+    .welcome .avatar {
+        width: 150px; /* Maintain avatar size on mobile */
     }
 }
