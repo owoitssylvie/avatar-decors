@@ -1,3 +1,4 @@
+/* Existing styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -7,7 +8,7 @@ body {
 
 header {
     background-color: #23272A;
-    padding: 40px 20px; /* Increase the padding to make the header taller */
+    padding: 20px;
     text-align: center;
     position: relative;
 }
@@ -16,18 +17,17 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
 }
 
 .logo-container {
     position: absolute;
-    top: -20px; /* Move the logo up */
+    top: -30px;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .logo {
-    width: 80px; /* Made the logo bigger */
+    width: 50px;
     height: auto;
 }
 
@@ -51,11 +51,6 @@ nav ul li a {
     color: #7289DA;
     text-decoration: none;
     font-size: 18px;
-    transition: text-decoration 0.3s; /* Smooth transition */
-}
-
-nav ul li a:hover {
-    text-decoration: underline; /* Underline on hover */
 }
 
 main {
@@ -76,6 +71,39 @@ main {
 
 .welcome .avatar {
     margin-top: 20px;
-    width: 150px; /* Made the cat avatar bigger */
+    width: 100px;
     height: auto;
+}
+
+/* New styles for mobile devices */
+@media (max-width: 768px) {
+    .logo-container {
+        position: static; /* Remove absolute positioning on mobile */
+        margin-top: 20px;
+    }
+
+    .logo {
+        width: 70px; /* Make the logo slightly larger on mobile */
+    }
+
+    h1 {
+        display: none; /* Hide "Jelly's Space" on mobile */
+    }
+
+    .container {
+        flex-direction: column; /* Stack navigation and logo on mobile */
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: row; /* Ensure nav items are in a row */
+        justify-content: center;
+        width: 100%; /* Make sure the nav fills the header width */
+        padding-top: 20px; /* Add some padding above the nav items */
+    }
+
+    nav ul li {
+        margin-left: 10px; /* Adjust spacing between links */
+        margin-right: 10px; /* Ensure even spacing */
+    }
 }
