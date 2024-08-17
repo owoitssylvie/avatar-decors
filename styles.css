@@ -30,14 +30,15 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Center the links */
+    justify-content: space-around; /* Evenly space out links */
     width: 100%; /* Ensure the links take up the full width */
-    flex-wrap: wrap; /* Allow wrapping if necessary */
 }
 
 nav ul li {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    flex: 1; /* Allow links to grow and fill the available space */
+    text-align: center; /* Center each individual link */
 }
 
 nav ul li a {
@@ -91,7 +92,7 @@ main {
     }
 
     nav ul {
-        justify-content: center; /* Center the links on mobile */
+        justify-content: space-around; /* Space out links evenly across the width */
         width: 100%; /* Ensure the links span the full width */
         padding: 0;
     }
@@ -99,7 +100,6 @@ main {
     nav ul li {
         margin-left: 5px;
         margin-right: 5px;
-        flex: 1; /* Allow links to grow and fill the available space */
         text-align: center; /* Center each individual link */
     }
 }
