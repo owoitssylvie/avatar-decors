@@ -21,7 +21,7 @@ header {
 
 .logo-container {
     position: absolute;
-    top: 10px; /* Moved down */
+    top: -20px; /* Move the logo up */
     left: 50%;
     transform: translateX(-50%);
 }
