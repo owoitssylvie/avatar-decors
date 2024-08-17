@@ -83,7 +83,7 @@ main {
 /* Mobile-specific styles */
 @media (max-width: 768px) {
     .container {
-        flex-direction: column; /* Stack elements on mobile */
+        flex-direction: column;
         align-items: center;
     }
 
@@ -92,10 +92,16 @@ main {
     }
 
     .logo-container {
-        position: static; /* Remove absolute positioning */
-        margin: 20px auto 0; /* Center the logo */
+        position: relative; /* Remove absolute positioning */
+        top: auto; /* Reset top position */
+        left: 50%; /* Center the logo horizontally */
+        transform: translateX(-50%); /* Ensure it's centered */
+        margin: 20px auto; /* Add margin to place it between header and welcome */
         text-align: center;
-        order: 1; /* Initially, place this at the top */
+    }
+
+    header + .logo-container {
+        margin-top: -20px; /* Slight overlap adjustment, if needed */
     }
 
     nav ul {
@@ -106,8 +112,7 @@ main {
     }
 
     .welcome {
-        padding-top: 10px; /* Adjust padding to keep spacing consistent */
-        order: 0; /* Move welcome section above the logo */
+        padding-top: 20px; /* Ensure space between logo and welcome */
     }
 
     main {
