@@ -57,7 +57,7 @@ main {
 }
 
 .welcome-logo {
-    width: 80px; /* Adjust the size of the logo as needed */
+    width: 120px; /* Increased size of the logo */
     height: auto;
     margin-bottom: 20px; /* Space between the logo and welcome text */
 }
@@ -81,7 +81,11 @@ main {
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {
+    h1 {
+        display: none; /* Hide "Jelly's Space" on mobile */
+    }
+
     .welcome-logo {
-        width: 70px; /* Slightly smaller logo on mobile */
+        width: 100px; /* Slightly larger logo on mobile */
     }
 }
