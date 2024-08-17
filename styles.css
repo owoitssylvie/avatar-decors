@@ -82,25 +82,24 @@ main {
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {
-    .logo-container {
-        position: relative; /* Now relative, so it follows document flow */
-        top: 0; /* Reset top position for mobile */
-        margin: 0 auto; /* Center the logo */
-        text-align: center;
-    }
-
-    .logo {
-        width: 70px; /* Maintain a slightly smaller logo on mobile */
-        height: auto;
+    .container {
+        flex-direction: column; /* Stack elements on mobile */
+        align-items: center;
     }
 
     h1 {
         display: none; /* Hide "Jelly's Space" on mobile */
     }
 
-    .container {
-        flex-direction: column; /* Stack elements on mobile */
-        align-items: center;
+    .logo-container {
+        position: static; /* Remove absolute positioning */
+        margin: 20px auto 0; /* Center the logo and add margin to the top */
+        text-align: center;
+    }
+
+    .logo {
+        width: 70px; /* Logo size on mobile */
+        height: auto;
     }
 
     nav ul {
@@ -108,23 +107,15 @@ main {
         justify-content: center;
         width: 100%;
         padding-top: 20px;
-    }
-
-    nav ul li {
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-bottom: 20px; /* Add space below the navigation links */
     }
 
     main {
-        padding-top: 10px; /* Adjust padding to account for the logo position */
-    }
-
-    .logo-container {
-        margin-bottom: 20px; /* Space between the logo and WELCOME! text */
+        padding-top: 0; /* Adjust padding to remove extra space at the top */
     }
 
     .welcome {
-        padding-top: 20px; /* Padding to separate from logo */
+        padding-top: 10px; /* Reduced padding to adjust for the logo */
     }
 
     .welcome .avatar {
