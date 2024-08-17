@@ -30,12 +30,14 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-around; /* Evenly distribute links */
-    width: 100%; /* Ensure the links take up the full width of the container */
+    justify-content: center; /* Center the links */
+    width: 100%; /* Ensure the links take up the full width */
+    flex-wrap: wrap; /* Allow wrapping if necessary */
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 nav ul li a {
@@ -89,23 +91,15 @@ main {
     }
 
     nav ul {
-        flex-direction: column; /* Stack links vertically */
-        justify-content: center; /* Center them in the container */
-        align-items: center;
+        justify-content: center; /* Center the links on mobile */
+        width: 100%; /* Ensure the links span the full width */
+        padding: 0;
     }
 
     nav ul li {
-        margin-left: 0;
-        margin-bottom: 10px; /* Add some space between the links */
-    }
-
-    .welcome-logo {
-        width: 100px; /* Logo size on mobile */
-        margin: 5px 0 5px; /* Add space above and reduce space below the logo on mobile */
-    }
-
-    .welcome {
-        padding-top: 20px; /* Add space above the logo on mobile */
-        margin-top: -10px; /* Pull the welcome section up slightly on mobile */
+        margin-left: 5px;
+        margin-right: 5px;
+        flex: 1; /* Allow links to grow and fill the available space */
+        text-align: center; /* Center each individual link */
     }
 }
