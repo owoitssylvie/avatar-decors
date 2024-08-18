@@ -41,13 +41,12 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #7289DA;
-    text-decoration: none;
-    font-size: 18px;
+    color: #7289DA; /* Blue color for links */
+    text-decoration: none; /* Remove underline by default */
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Underline links on hover */
 }
 
 main {
@@ -110,6 +109,16 @@ main {
 
 .translators ul li {
     margin-bottom: 5px;
+}
+
+/* Link styling for blue color */
+a {
+    color: #7289DA; /* Set link color to blue */
+    text-decoration: none; /* Remove underline by default */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
 }
 
 /* Mobile-specific styles */
