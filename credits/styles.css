@@ -130,30 +130,45 @@ a:hover {
     nav {
         display: flex;
         justify-content: center; /* Center the navigation bar */
-        padding: 0; /* Remove any padding that might cause misalignment */
+        align-items: center; /* Center items vertically */
+        width: 100%; /* Ensure nav spans the full width */
+        background-color: rgba(0, 0, 255, 0.1); /* Light blue background for debugging */
+        border: 1px solid blue; /* Blue border for debugging */
+        padding: 0;
+        box-sizing: border-box; /* Include padding and border in element's total width */
     }
 
     nav ul {
         display: flex;
-        justify-content: center; /* Ensure the links are centered within the nav */
-        list-style: none;
+        justify-content: center; /* Center links within the nav */
         padding: 0; /* Remove padding from the ul element */
         margin: 0; /* Remove any default margin */
+        list-style: none; /* Remove list style */
+        width: 100%; /* Make ul span the full width of nav */
+        background-color: rgba(255, 0, 0, 0.1); /* Light red background for debugging */
+        border: 1px solid red; /* Red border for debugging */
+        box-sizing: border-box; /* Ensure the box model is consistent */
     }
 
     nav ul li {
-        margin: 0 10px; /* Add equal space around each link */
+        flex: 1; /* Distribute items evenly */
+        text-align: center; /* Center the text inside each list item */
+        background-color: rgba(0, 255, 0, 0.1); /* Light green background for debugging */
+        border: 1px solid green; /* Green border for debugging */
     }
 
     nav ul li a {
         color: #7289DA; /* Maintain the blue color */
         text-decoration: none; /* No underline by default */
+        display: block; /* Ensure the link takes up the full area of li */
+        padding: 10px; /* Add some padding to links */
     }
 
     nav ul li a:hover {
         text-decoration: underline; /* Underline on hover */
     }
 }
+
 
 
 
