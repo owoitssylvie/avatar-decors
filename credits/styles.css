@@ -112,13 +112,13 @@ main {
     margin-bottom: 5px;
 }
 
-/* General link styling */
-a {
+/* Specific link styling for disclaimer */
+.disclaimer a {
     color: #7289DA; /* Set the link color to blue */
     text-decoration: none; /* Remove underline by default */
 }
 
-a:hover {
+.disclaimer a:hover {
     text-decoration: underline; /* Underline on hover */
 }
 
