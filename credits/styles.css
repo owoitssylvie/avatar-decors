@@ -128,9 +128,9 @@ a:hover {
     }
 
     nav ul {
-        justify-content: space-around; /* Space out links evenly across the width */
+        justify-content: center; /* Center links evenly across the width */
         width: 100%; /* Ensure the links span the full width */
-        padding-left: 30px; /* Shift links a bit more to the right on mobile */
+        padding-left: 0; /* Remove manual padding to avoid offsetting */
     }
 
     nav ul li {
@@ -144,3 +144,4 @@ a:hover {
         padding: 15px;
     }
 }
+
