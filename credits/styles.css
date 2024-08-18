@@ -132,8 +132,6 @@ a:hover {
         justify-content: center; /* Center the navigation bar */
         align-items: center; /* Center items vertically */
         width: 100%; /* Ensure nav spans the full width */
-        background-color: rgba(0, 0, 255, 0.1); /* Light blue background for debugging */
-        border: 1px solid blue; /* Blue border for debugging */
         padding: 0;
         box-sizing: border-box; /* Include padding and border in element's total width */
     }
@@ -145,16 +143,12 @@ a:hover {
         margin: 0; /* Remove any default margin */
         list-style: none; /* Remove list style */
         width: 100%; /* Make ul span the full width of nav */
-        background-color: rgba(255, 0, 0, 0.1); /* Light red background for debugging */
-        border: 1px solid red; /* Red border for debugging */
         box-sizing: border-box; /* Ensure the box model is consistent */
     }
 
     nav ul li {
         flex: 1; /* Distribute items evenly */
         text-align: center; /* Center the text inside each list item */
-        background-color: rgba(0, 255, 0, 0.1); /* Light green background for debugging */
-        border: 1px solid green; /* Green border for debugging */
     }
 
     nav ul li a {
