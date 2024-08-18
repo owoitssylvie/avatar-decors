@@ -84,6 +84,34 @@ main {
     height: auto;
 }
 
+/* New Disclaimer and Translators Styles */
+.disclaimer, .translators {
+    background-color: #2F3136; /* Darker background for sections */
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%; /* Center the sections */
+    border-radius: 8px;
+    text-align: left; /* Align text to the left */
+}
+
+.disclaimer h3, .translators h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.disclaimer p, .translators ul {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.translators ul {
+    padding-left: 20px; /* Indent list items */
+}
+
+.translators ul li {
+    margin-bottom: 5px;
+}
+
 /* Mobile-specific styles */
 @media (max-width: 768px) {
     h1 {
@@ -100,5 +128,10 @@ main {
         margin-left: 5px;
         margin-right: 5px;
         text-align: center; /* Center each individual link */
+    }
+
+    .disclaimer, .translators {
+        width: 90%; /* Increase width on mobile for better readability */
+        padding: 15px;
     }
 }
