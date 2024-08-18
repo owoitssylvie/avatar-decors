@@ -113,13 +113,13 @@ main {
 }
 
 /* Specific link styling for disclaimer */
-.disclaimer a {
-    color: #7289DA; /* Set the link color to blue */
-    text-decoration: none; /* Remove underline by default */
+.disclaimer p a {
+    color: #7289DA !important; /* Ensure the link color is blue */
+    text-decoration: none !important; /* Remove underline by default */
 }
 
-.disclaimer a:hover {
-    text-decoration: underline; /* Underline on hover */
+.disclaimer p a:hover {
+    text-decoration: underline !important; /* Underline on hover */
 }
 
 /* Mobile-specific styles */
