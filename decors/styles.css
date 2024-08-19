@@ -143,17 +143,15 @@ img {
     text-decoration: underline;
 }
 
-@media only screen and (max-width: 400px) {
-    #main_logo {
-        display: none;
-    }
-}
-
 /* Mobile-specific styles */
 @media (max-width: 768px) {
     header {
         text-align: left;
         padding: 10px 20px;
+    }
+
+    h1 {
+        display: none; /* Hide "Jelly's Space" on mobile */
     }
 
     nav {
