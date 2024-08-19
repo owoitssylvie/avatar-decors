@@ -15,7 +15,7 @@ body {
 
 header {
     background-color: #23272A;
-    padding: 30px 20px;
+    padding: 20px 20px; /* Adjust the padding */
     text-align: center;
     position: relative;
 }
@@ -37,14 +37,11 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-around;
-    width: 100%;
+    justify-content: flex-end; /* Align to the right */
 }
 
 nav ul li {
-    margin-left: 5px;
-    margin-right: 5px;
-    text-align: center;
+    margin-left: 20px;
 }
 
 nav ul li a {
@@ -152,6 +149,21 @@ img {
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {
+    header {
+        text-align: left;
+        padding: 10px 20px;
+    }
+
+    nav ul {
+        justify-content: flex-end;
+        padding-left: 30px; /* Slightly shift links to the right on mobile */
+    }
+
+    nav ul li {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
     .grid-container {
         grid-template-columns: repeat(3, 1fr);
         gap: 10px;
