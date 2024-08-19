@@ -1,8 +1,8 @@
 // Define the image data for each artist
 const decorData = {
-    artist1: ["discord1.png", "discord2.png", "discord3.png"], // Add more images as needed
-    artist2: ["discord4.png", "discord5.png"], // Add more images as needed
-    artist3: ["discord6.png"], // Add more images as needed
+    artist1: ["1.png", "1.png", "1.png", "1.png", "1.png", "1.png", "1.png", "1.png", "1.png", "1.png", "1.png", "1.png",], // Add more images as needed
+    artist2: ["2.png", "2.png", "2.png", "2.png", "2.png", "2.png", "2.png", "2.png", "2.png", "2.png", "2.png", "2.png",], // Add more images as needed
+    artist3: ["3.png", "3.png", "3.png", "3.png", "3.png", "3.png", "3.png", "3.png", "3.png", "3.png", "3.png", "3.png",], // Add more images as needed
     // Add more artists and images as needed
 };
 
