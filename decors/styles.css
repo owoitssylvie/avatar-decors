@@ -143,6 +143,12 @@ img {
     text-decoration: underline;
 }
 
+@media only screen and (max-width: 400px) {
+    #main_logo {
+        display: none;
+    }
+}
+
 /* Mobile-specific styles */
 @media (max-width: 768px) {
     header {
