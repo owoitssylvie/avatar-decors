@@ -13,7 +13,6 @@ const artistTitle = document.getElementById('artist-title');
 
 // Function to update the gallery based on the selected artist
 function updateGallery(artist) {
-    console.log("Selected artist:", artist); // Debugging line
     decorGallery.innerHTML = ''; // Clear existing images
     artistTitle.textContent = `${artist.charAt(0).toUpperCase() + artist.slice(1)}'s Decors:`; // Update the title
 
@@ -22,7 +21,7 @@ function updateGallery(artist) {
         decorData[artist].forEach(image => {
             // Create the grid item element
             const item = document.createElement('div');
-            item.className = 'grid-item';
+            item.className = 'item';
 
             // Create the image wrapper element
             const wrapper = document.createElement('div');
@@ -32,11 +31,13 @@ function updateGallery(artist) {
             const discordImg = document.createElement('img');
             discordImg.src = `images/discordlogo.png`; // Use discordlogo.png for the overlay
             discordImg.alt = "Discord Logo";
+            discordImg.className = 'default-profile';
 
-            // Create the decor image element
+            // Create the decor image element (the frame)
             const frameImg = document.createElement('img');
             frameImg.src = `images/${image}`; // Use the selected artist's image
             frameImg.alt = image;
+            frameImg.className = 'frame';
 
             // Append the Discord logo and decor image to the wrapper
             wrapper.appendChild(discordImg);  // This will be below the decor image
