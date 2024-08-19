@@ -1,14 +1,21 @@
-/* General styles (PC and Mobile) */
+/* General styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #2C2F33;
-    color: #FFFFFF;
+    background-color: #313338;
+    color: #f5f5f5;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    overflow: auto;
 }
 
 header {
     background-color: #23272A;
-    padding: 30px 20px; /* Maintain reduced header padding */
+    padding: 30px 20px;
     text-align: center;
     position: relative;
 }
@@ -30,146 +37,151 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-around; /* Evenly space out links */
-    width: 100%; /* Ensure the links take up the full width */
+    justify-content: space-around;
+    width: 100%;
 }
 
 nav ul li {
     margin-left: 5px;
     margin-right: 5px;
-    text-align: center; /* Center each individual link */
+    text-align: center;
 }
 
 nav ul li a {
     color: #7289DA;
     text-decoration: none;
-    font-size: 20px; /* Consistent font size */
+    font-size: 20px;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
 }
 
-main {
-    text-align: center;
-    padding: 20px 20px; /* Maintain reduced padding to remove extra space */
-}
-
-.welcome {
-    text-align: center; /* Center all content in the welcome class */
-    padding-top: 20px; /* Add a bit more space above the logo */
-    margin-top: -10px; /* Pull the welcome section up slightly */
-}
-
-.welcome-logo {
-    width: 120px; /* Logo size */
-    height: auto;
-    margin: 5px 0 5px; /* Add a small space above the logo and reduce space below */
-}
-
-.welcome h2 {
-    font-size: 36px;
-    margin-bottom: 10px; /* Maintain reduced space below the welcome heading */
-}
-
-.welcome p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 10px; /* Maintain reduced space between paragraphs */
-}
-
-.welcome .avatar {
-    margin-top: 10px; /* Reduce space above the cat avatar */
-    width: 150px; /* Maintained the size of the cat avatar */
-    height: auto;
-}
-
-/* Disclaimer and Translators Styles */
-.disclaimer, .translators {
-    background-color: #2F3136; /* Darker background for sections */
+/* Dropdown and gallery styling */
+.decor-container {
     padding: 20px;
-    margin: 20px auto;
-    width: 80%; /* Center the sections */
-    border-radius: 8px;
-    text-align: left; /* Align text to the left */
+    text-align: center;
 }
 
-.disclaimer h3, .translators h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
+.dropdown-container {
+    margin-bottom: 20px;
 }
 
-.disclaimer p, .translators ul {
+#artist-select {
+    padding: 10px;
     font-size: 16px;
-    line-height: 1.5;
 }
 
-.translators ul {
-    padding-left: 20px; /* Indent list items */
+/* Grid for images */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    justify-items: center;
 }
 
-.translators ul li {
-    margin-bottom: 5px;
+.item {
+    position: relative;
+    margin: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #6cb896;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Specific link styling for disclaimer */
-.disclaimer p a {
-    color: #7289DA !important; /* Ensure the link color is blue */
-    text-decoration: none !important; /* Remove underline by default */
+.image-wrapper {
+    position: relative;
+    width: 230px;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: -20px;
 }
 
-.disclaimer p a:hover {
-    text-decoration: underline !important; /* Underline on hover */
+.default-profile {
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.frame {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.download-link {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #007bff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.download-link:hover,
+.download-link:active {
+    text-decoration: underline;
 }
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {
-    h1 {
-        display: none; /* Hide "Jelly's Space" on mobile */
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        justify-items: center;
     }
 
-    header {
-        padding: 15px 20px; /* Adjust the padding to ensure consistency */
+    .item {
+        width: 135px;
+        height: 170px;
+        padding: 5px;
+        margin: 10px 0;
     }
 
-    nav {
-        display: flex;
-        justify-content: center; /* Center the navigation bar */
-        align-items: center; /* Center items vertically */
-        width: 100%; /* Ensure nav spans the full width */
-        padding: 0;
-        box-sizing: border-box; /* Include padding and border in element's total width */
+    .image-wrapper {
+        width: 125px;
+        height: 125px;
     }
 
-    nav ul {
-        display: flex;
-        justify-content: center; /* Center links within the nav */
-        padding: 0; /* Remove padding from the ul element */
-        margin: 0; /* Remove any default margin */
-        list-style: none; /* Remove list style */
-        width: 100%; /* Make ul span the full width of nav */
-        box-sizing: border-box; /* Ensure the box model is consistent */
+    .default-profile {
+        width: 105px;
+        height: 105px;
     }
 
-    nav ul li {
-        flex: 1; /* Distribute items evenly */
-        text-align: center; /* Center the text inside each list item */
+    .frame {
+        width: 125px;
+        height: 125px;
     }
 
-    nav ul li a {
-        color: #7289DA; /* Maintain the blue color */
-        text-decoration: none; /* No underline by default */
-        display: block; /* Ensure the link takes up the full area of li */
-        padding: 10px; /* Add some padding to links */
-        font-size: 20px; /* Consistent font size for mobile */
-    }
-
-    nav ul li a:hover {
-        text-decoration: underline; /* Underline on hover */
-    }
-
-    .disclaimer, .translators {
-        width: 90%; /* Increase width on mobile for better readability */
-        padding: 15px;
+    .download-link {
+        font-size: 12px;
+        bottom: 5px;
     }
 }
