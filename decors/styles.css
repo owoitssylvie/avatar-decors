@@ -2,15 +2,8 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #313338;
-    color: #f5f5f5;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100vh;
-    overflow: auto;
+    background-color: #2C2F33;
+    color: #FFFFFF;
 }
 
 header {
@@ -37,17 +30,20 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: flex-end; /* Align to the right */
+    justify-content: space-around; /* Evenly space out links */
+    width: 100%; /* Ensure the links take up the full width */
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center; /* Center each individual link */
 }
 
 nav ul li a {
     color: #7289DA;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 20px; /* Updated font size for consistency */
 }
 
 nav ul li a:hover {
@@ -154,14 +150,40 @@ img {
         padding: 10px 20px;
     }
 
+    nav {
+        display: flex;
+        justify-content: center; /* Center the navigation bar */
+        align-items: center; /* Center items vertically */
+        width: 100%; /* Ensure nav spans the full width */
+        padding: 0;
+        box-sizing: border-box; /* Include padding and border in element's total width */
+    }
+
     nav ul {
-        justify-content: flex-end;
-        padding-left: 30px; /* Slightly shift links to the right on mobile */
+        display: flex;
+        justify-content: center; /* Center links within the nav */
+        padding: 0; /* Remove padding from the ul element */
+        margin: 0; /* Remove any default margin */
+        list-style: none; /* Remove list style */
+        width: 100%; /* Make ul span the full width of nav */
+        box-sizing: border-box; /* Ensure the box model is consistent */
     }
 
     nav ul li {
-        margin-left: 5px;
-        margin-right: 5px;
+        flex: 1; /* Distribute items evenly */
+        text-align: center; /* Center the text inside each list item */
+    }
+
+    nav ul li a {
+        color: #7289DA; /* Maintain the blue color */
+        text-decoration: none; /* No underline by default */
+        display: block; /* Ensure the link takes up the full area of li */
+        padding: 10px; /* Add some padding to links */
+        font-size: 20px; /* Consistent font size for mobile */
+    }
+
+    nav ul li a:hover {
+        text-decoration: underline; /* Underline on hover */
     }
 
     .grid-container {
