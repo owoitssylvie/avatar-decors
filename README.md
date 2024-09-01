@@ -1,1 +1,1 @@
-if ur reading this u are wasting ur time lol
+Next.js rewrite of the main page, updates soon i promise
