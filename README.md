@@ -1,6 +1,7 @@
 02/09/24:
 
-![image](https://github.com/user-attachments/assets/99a837d8-abda-442c-9f81-49d6f6d9547b)
+![image](https://github.com/user-attachments/assets/c4431d52-8bd4-49b3-adf7-ae3e4d41b238)![image](https://github.com/user-attachments/assets/cb76bfb5-d430-4027-af59-2fbcdc656c3f)
+
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
