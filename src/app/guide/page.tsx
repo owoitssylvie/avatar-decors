@@ -20,7 +20,7 @@ export default function Home() {
             src="/jellyhome.png"
             alt="Jelly Logo"
             width={100}
-            height={24}
+            height={36}
             priority
           />
         </div>
