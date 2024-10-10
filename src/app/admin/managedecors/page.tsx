@@ -1,8 +1,7 @@
 import Image from "next/image";
-import Header from "../components/header";
-import { ArtistDecorGallery } from "../components/artistdecorgallery";
+import Header from "@/app/components/header";
 
-export default function Home() {
+export default function ManageDecors() {
   return (
     <main className="flex max-h-screen flex-col items-center justify-between p-12">
       <Header />
@@ -16,9 +15,7 @@ export default function Home() {
           priority
         />
       </div>
-      <div className="pt-96">
-        <ArtistDecorGallery></ArtistDecorGallery>
-      </div>
+      <div className="pt-96"></div>
     </main>
   );
 }
